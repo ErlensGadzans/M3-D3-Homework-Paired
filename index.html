@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--
-
-        
-        [EXTRA]
-        7) Add in the "jumbotron" a search field. If there is a value there and the user press "Load Seconday Image" the API call should use the specified query as query
-        8) After every button is pressed, display in an alert for 5 seconds the result of the operation (es.: 20 images loaded)
-        9) Handle API error gracefully using alert components with the message inside
-        10) Add at the bottom of the page a carousel with "forest" images loaded by another API call
-        [EVEN MORE EXTRA]
-        11) Use the map method to create from your splashbase response object an array containing just the url strings
-        12) Use filter to modify the "forest" api call to receive only images from a source different than "unsplash"
-        13) Use the reduce method on the results array to sum up all the id numbers in a single one
-        [HINT]
-        You can replace the images src for making your pictures appear on button click or you can use template literals to re-create all the cards from scratch.
-        Use arrow functions to make some practice with them
-        API Docs: http://www.splashbase.co/api
-      -->
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -109,6 +92,9 @@
     </header>
 
     <main role="main">
+      <div class="alert alert-success d-none" role="alert">
+        <!-- Generate Alert Message Here -->
+      </div>
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Album API example</h1>
