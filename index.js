@@ -22,9 +22,9 @@ async function loadImage() {
     console.log("Loaded " + 10 + " images");
   });
 
-  const allImgIDs = document.querySelectorAll(".text-muted");
-  for (let i = 2; i < allImgIDs.length - 1; i++) {
-    allImgIDs[i].innerText = imageLibrary[0].images[i - 2].id;
+  const allImgIDs = document.querySelectorAll("small");
+  for (let i = 0; i < allImgIDs.length; i++) {
+    allImgIDs[i].innerText = imageLibrary[0].images[i].id;
   }
 
   imageSet_One = true;
@@ -40,6 +40,10 @@ async function loadImagesSecondary() {
       imageLibrarySecondary.push(data);
       console.log("Loaded " + (i + 1) + " images");
     });
+  }
+  const allImgIDs = document.querySelectorAll("small");
+  for (let i = 0; i < allImgIDs.length; i++) {
+    allImgIDs[i].innerText = imageLibrarySecondary[i].id;
   }
   imageSet_One = false;
   alert("Images have been loaded");
